@@ -8,7 +8,7 @@ const Home = () => {
       <img src={homeopathyImage} alt="Homeopathy" className="background-image" />
       <div className="overlay"></div>
       <div className="content">
-        <h1>Welcome to Ashok Homeopathic clinic</h1>
+        <h1>Welcome to Ashok Homeopathic Clinic</h1>
         <p>Your one stop solution to all your health problems</p>
       </div>
     </div>

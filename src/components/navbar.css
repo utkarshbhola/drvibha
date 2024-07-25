@@ -1,7 +1,75 @@
-.navbar-orange-yellow {
-    background-color: #FFCC00;
+.navbar {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align items to the right */
+  background: linear-gradient(to right, #f0c800, #f8e825); /* Orange-yellow gradient */
+  padding: 1rem 2rem; /* Optional padding */
+  position: relative; /* For positioning the nav-links absolutely */
+}
+.logo {
+  height: 50px; /* Adjust the height as needed */
+  /* Optionally add width if you want to control the size */
+}
+.nav-link {
+  margin-right: 1rem; /* Space between links */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Link color */
+  font-weight: bold; /* Optional bold font */
+}
+
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+.nav-links {
+  display: flex; /* Default display for larger screens */
+}
+
+@media (max-width: 768px) { /* For screens smaller than 768px */
+  .navbar {
+    justify-content: space-between; /* Space between logo and hamburger */
   }
-  .navbar-orange-yellow .navbar-brand,
-  .navbar-orange-yellow .navbar-nav .nav-link {
-    color: #155724;
+
+  .hamburger {
+    display: flex; /* Show hamburger menu */
   }
+
+  .nav-links {
+    display: none; /* Hide navigation links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Full width */
+    background: linear-gradient(to right, #f0c800, #f8e825); /* Same gradient */
+    position: absolute; /* Position absolute for overlay effect */
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show navigation links when toggled */
+  }
+
+  .nav-link {
+    margin: 1rem 0; /* Adjust spacing for vertical layout */
+    text-align: center; /* Center links horizontally */
+  }
+  .logo {
+    margin-bottom: 1rem; /* Add space between logo and navbar on small screens */
+  }
+}
+.logo-container {
+  width: 100px; /* Adjust width as needed */
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.logo-container img {
+  /* Additional styles for the logo image */
+}
