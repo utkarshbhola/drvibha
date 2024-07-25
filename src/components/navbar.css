@@ -1,0 +1,7 @@
+.navbar-orange-yellow {
+    background-color: #FFCC00;
+  }
+  .navbar-orange-yellow .navbar-brand,
+  .navbar-orange-yellow .navbar-nav .nav-link {
+    color: #155724;
+  }
